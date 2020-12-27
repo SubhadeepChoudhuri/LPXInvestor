@@ -1,0 +1,7 @@
+<mat-form-field appearance="fill" style="width:350px;" id="ContactsDropdown">
+    <mat-label>Select Contact</mat-label>
+    <mat-select #selectedContact (selectionChange)="onChange3(selectedContact.value)" matTooltip="{{selectedContact.value}}">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let Contact of ContactData" [value]="Contact" matTooltip="{{Contact.ContactName}}">{{Contact.ContactName}}</mat-option>
+    </mat-select>
+</mat-form-field>
