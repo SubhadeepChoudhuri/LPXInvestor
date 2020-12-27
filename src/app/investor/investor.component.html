@@ -1,0 +1,9 @@
+<mat-form-field appearance="fill" style="width:350px;" id="InvestorsDropdown">
+    <mat-label>Select Investor</mat-label>
+    <mat-select #selectedInvestor (selectionChange)="onChange1(selectedInvestor.value)" [disabled]="isDisabled" matTooltip="{{selectedInvestor.value}}">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let investor of InvestorData" [value]="investor" matTooltip="{{investor}}">{{investor}}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+
