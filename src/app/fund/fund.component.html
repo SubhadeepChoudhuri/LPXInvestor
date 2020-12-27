@@ -1,0 +1,7 @@
+<mat-form-field appearance="fill" style="width:350px;" id="FundsDropdown">
+    <mat-label>Select Fund</mat-label>
+    <mat-select #selectedFund (selectionChange)="onChange2(selectedFund.value)" matTooltip="{{selectedFund.value}}">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let Fund of FundData; let i=index" [value]="Fund" matTooltip="{{Fund.FundVal}}" [disabled]="FundisDisabled && Fund.isDisabledFund">{{Fund.FundVal}}</mat-option>
+    </mat-select>
+</mat-form-field>
